@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite --port 443",
-    "netlify": "netlify dev --port 3333 --targetPort 443",
+    "dev": "vite --port 4444",
+    "netlify": "netlify dev --port 3333 --targetPort 4444",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext=.ts,.vue",
