@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-  install:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2.0.1
         id: pnpm-install
         with:
@@ -30,10 +30,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-      
-  run:
-    needs: [install]
-    runs-on: ubuntu-latest
-    steps:
+        
       - name: run test
         run: pnpm dev
