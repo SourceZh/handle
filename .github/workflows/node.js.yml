@@ -36,4 +36,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run test
-      - run: pnpm dev
+        run: pnpm dev
